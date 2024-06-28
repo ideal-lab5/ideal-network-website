@@ -3,9 +3,11 @@ import "./styles/Header.sass";
 function Header() {
   return (
     <header>
-      <nav>
-        <a href="#" class="brand">asd</a>
-      </nav>
+      <div className="container">
+        <nav>
+          <a href="#" class="brand">asd</a>
+        </nav>
+      </div>
     </header>
   );
 }
