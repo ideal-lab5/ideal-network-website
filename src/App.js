@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Hero from "./Hero";
-import Randomness from "./Randomness";
+import Decentralized from "./Decentralized";
 import Timelock from "./Timelock";
 import Privacy from "./Privacy";
 import Footer from "./Footer";
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Randomness />
+        <Decentralized />
         <Timelock />
         <Privacy />
       </main>

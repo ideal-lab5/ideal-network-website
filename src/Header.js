@@ -2,10 +2,12 @@ import "./styles/Header.sass";
 
 function Header() {
   return (
-    <header>
+    <header className="fixed w-full bg-black bg-opacity-70 z-30">
       <div className="container">
         <nav>
-          <a href="#" class="brand">asd</a>
+          <a href="/" className="brand py-4">
+            <img src="/images/onecolor-white-logo.svg" />
+          </a>
         </nav>
       </div>
     </header>
