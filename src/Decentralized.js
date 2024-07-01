@@ -7,10 +7,10 @@ function Decentralized() {
         <div className="textContainer flex flex-col justify-center items-start gap-10 relative">
           <h1 className="text-4xl xl:text-6xl font-bold">Decentralized</h1>
           <p>The Ideal Network is a blockchain that uses a novel consensus mechanism. It produces publicly verifiable secret keys in each block header.</p>
-          <button className="cta">Decentralize the universe</button>
+          <a href="https://etf.idealabs.network/docs/intro" className="cta" target="_blank" rel="noreferrer">Decentralize the universe</a>
         </div>
       </div>
-      <img src="/images/Decentralized.png" className="decentralized" />
+      <img src="/images/Decentralized.png" className="decentralized" alt="decentralized"/>
     </section>
   );
 }

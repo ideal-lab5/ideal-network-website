@@ -7,23 +7,70 @@ function Footer() {
         <div className="upper flex flex-col md:flex-row gap-10 md:gap-20">
           <ul className="w-full md:w-80">
             <p className="category uppercase mb-4">Docs</p>
-            <li><a href="#">Tutorial</a></li>
+            <li>
+              <a
+                href="https://etf.idealabs.network/docs/intro"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Tutorial
+              </a>
+            </li>
           </ul>
           <ul className="w-full md:w-80">
             <p className="category uppercase mb-4">Company</p>
-            <li><a href="#">Discord</a></li>
-            <li><a href="#">Matrix</a></li>
-            <li><a href="#">Substacks</a></li>
+            <li>
+              <a
+                href="https://discord.gg/TheXVBdbbu"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Discord
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://matrix.to/#/#ideal-labs:matrix.org"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Matrix
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://ideallabs.substack.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Substack
+              </a>
+            </li>
           </ul>
           <ul className="w-full md:w-80">
             <p className="category uppercase mb-4">More</p>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Github</a></li>
+            <li>
+              <a
+                href="https://medium.com/@ideal_labs"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Medium
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/ideal-lab5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
+            </li>
           </ul>
         </div>
         <div className="lower">
-          <p>@ 2024 Ideal Network</p>
-          <p><a href="">Terms of Service</a>&nbsp;&nbsp;&nbsp;<a href="">Terms of Service</a></p>
+          <p>Copyright © 2024 Ideal Labs, LLC</p>
         </div>
       </div>
     </footer>

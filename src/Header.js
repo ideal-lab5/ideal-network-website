@@ -6,7 +6,7 @@ function Header() {
       <div className="container">
         <nav>
           <a href="/" className="brand py-4">
-            <img src="/images/onecolor-white-logo.svg" />
+            <img src="/images/onecolor-white-logo.svg" alt="Ideal Network" />
           </a>
         </nav>
       </div>
