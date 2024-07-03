@@ -18,7 +18,7 @@ function Footer() {
             </li>
           </ul>
           <ul className="w-full md:w-80">
-            <p className="category uppercase mb-4">Company</p>
+            <p className="category uppercase mb-4">Community</p>
             <li>
               <a
                 href="https://discord.gg/TheXVBdbbu"
@@ -67,7 +67,28 @@ function Footer() {
                 Github
               </a>
             </li>
+            <li>
+              <a
+                href="https://x.com/Ideallabs0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                X
+              </a>
+            </li>
           </ul>
+          <ul className="w-full md:w-80">
+            <p className="category uppercase mb-4">Contact</p>
+            <li>
+              <a
+                href="mailto:hello@idealabs.network"
+                target="_blank"
+                rel="noreferrer"
+              >
+                hello@idealabs.network
+              </a>
+            </li>
+            </ul>
         </div>
         <div className="lower">
           <p>Copyright © 2024 Ideal Labs, LLC</p>
