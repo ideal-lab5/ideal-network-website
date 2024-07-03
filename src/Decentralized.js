@@ -6,7 +6,7 @@ function Decentralized() {
       <div className="container flex items-center">
         <div className="textContainer flex flex-col justify-center items-start gap-10 relative">
           <h1 className="text-4xl xl:text-6xl font-bold">Decentralized</h1>
-          <p>The Ideal Network is a blockchain that uses a novel consensus mechanism. It produces publicly verifiable secret keys in each block header.</p>
+          <p>The Ideal Network is permisionless blockchain that acts as an entropy layer for the next generation of fair protocols, enabling new paradigms for trustless interactions.</p>
           <a href="https://etf.idealabs.network/docs/intro" className="cta" target="_blank" rel="noreferrer">Decentralize the universe</a>
         </div>
       </div>
