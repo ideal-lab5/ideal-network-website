@@ -49,28 +49,28 @@ function Header() {
               id="mobile-menu"
               className="flex flex-col items-center justify-between min-h-[250px] mobile"
             >
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b border-gray-400 my-6 uppercase">
                 <a href="https://etf.idealabs.network/docs/intro" target="_blank" rel="noreferrer">Docs</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b border-gray-400 my-6 uppercase">
                 <a href="https://discord.gg/TheXVBdbbu" target="_blank" rel="noreferrer">Discord</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b border-gray-400 my-6 uppercase">
                 <a href="https://matrix.to/#/#ideal-labs:matrix.org" target="_blank" rel="noreferrer">Matrix</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b border-gray-400 my-6 uppercase">
                 <a href="https://ideallabs.substack.com/" target="_blank" rel="noreferrer">Substack</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b border-gray-400 my-6 uppercase">
                 <a href="https://medium.com/@ideal_labs" target="_blank" rel="noreferrer">Medium</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b border-gray-400 my-6 uppercase">
                 <a href="https://github.com/ideal-lab5" target="_blank" rel="noreferrer">GitHub</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b border-gray-400 my-6 uppercase">
                 <a href="https://x.com/Ideallabs0" target="_blank" rel="noreferrer">X</a>
               </li>
-              <li className="border-b border-gray-400 my-8 uppercase">
+              <li className="border-b border-gray-400 my-6 uppercase">
                 <a href="mailto:hello@idealabs.network" target="_blank" rel="noreferrer">Contact</a>
               </li>
             </ul>
