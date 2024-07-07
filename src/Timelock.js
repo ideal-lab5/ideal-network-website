@@ -7,7 +7,7 @@ function Timelock() {
         <div className="textContainer flex flex-col justify-center items-end gap-10 relative">
           <h2 className="text-4xl xl:text-6xl font-bold text-right">Timelock Encryption</h2>
           <p className="text-right">The Ideal Network enables timelock encryption, allowing you to effortlessly send messages into the future and unlock them right from your browser!</p>
-          <a href="https://etf.idealabs.network/docs/intro" className="cta" target="_blank" rel="noreferrer">Encryption To the Future</a>
+          <a href="https://etf.idealabs.network/docs/intro" className="cta" target="_blank" rel="noreferrer">Encryption To The Future</a>
         </div>
       </div>
       <img src="/images/Timelock.png" className="timelock" alt="Timelock Encryption" />
