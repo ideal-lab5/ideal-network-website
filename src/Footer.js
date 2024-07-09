@@ -9,7 +9,7 @@ function Footer() {
             <p className="category uppercase mb-4">Docs</p>
             <li>
               <a
-                href="https://etf.idealabs.network/docs/intro"
+                href="https://docs.idealabs.network/docs/intro"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -88,7 +88,7 @@ function Footer() {
                 hello@idealabs.network
               </a>
             </li>
-            </ul>
+          </ul>
         </div>
         <div className="lower">
           <p>Copyright © 2024 Ideal Labs, LLC</p>
