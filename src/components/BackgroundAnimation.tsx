@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+import '../app/globals.css';
 
 export default function BackgroundAnimation() {
   const mountRef = useRef<HTMLDivElement>(null)

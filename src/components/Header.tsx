@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import '../app/globals.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
