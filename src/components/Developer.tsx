@@ -4,66 +4,120 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const codeExamples = {
-  randomness: `// Get verifiable randomness
-import { IdealBeacon } from '@ideal-labs/sdk';
+  // Parachain Runtime Integration - Verifiable Randomness
+  randomness: `// Get verifiable randomness from a Parachain runtime
+pub struct PulseConsumerImpl;
+impl PulseConsumer<Pulse, SubscriptionId, (), ()> for PulseConsumerImpl {
+    fn consume_pulse(pulse: Pulse, sub_id: SubscriptionId) -> Result<(), ()> {
+        if pulse
+            .authenticate(BEACON_PUBKEY.try_into().expect("The public key is well-defined; qed."))
+        {
+            // Randomness consumption logic goes here.
+            log::info!("IDN Consumer: Verified pulse: {:?} with sub id: {:?}", pulse, sub_id);
+        } else {
+            // This should never happen.
+            // If it does, you should immediately pause your subscription and contact Ideal Labs.
+            log::error!(
+                "IDN Consumer: Unverified pulse ingested: {:?} with sub id: {:?}",
+                pulse,
+                sub_id
+            );
+        }
 
-const beacon = new IdealBeacon();
+        Ok(())
+    }
+}`,
 
-async function getRandomness() {
-  const result = await beacon.getLatest();
-  return {
-    randomness: result.randomness,
-    signature: result.signature,
-    round: result.round
-  };
+  // Cross-chain ink! Smart Contracts
+  crossChainInk: `// Cross-chain ink! Smart Contract Integration
+use idn_client_contract_lib::{
+    ContractPulse, IdnClient, IdnClientImpl, RandomnessReceiver, 
+    SubscriptionId, Result, Error
+};
+use idn_client_contract_lib::Pulse;
+
+// Implement the RandomnessReceiver trait to handle incoming randomness
+impl RandomnessReceiver for YourContract {
+    fn on_randomness_received(
+        &mut self, 
+        pulse: ContractPulse,
+        subscription_id: SubscriptionId
+    ) -> Result<()> {
+        let randomness = pulse.rand();
+        // Your randomness consumption logic here
+        Ok(())
+    }
 }
 
-// Use in your game logic
-const lootRoll = await getRandomness();
-const rarity = determineRarity(lootRoll.randomness);`,
-  
-  timelock: `// Create timelocked transaction
-import { Timelock } from '@ideal-labs/sdk';
+// Add to Cargo.toml:
+// [dependencies]
+// idn-client-contract-lib = { version = "0.1.0", default-features = false }`,
 
-async function createSealedBid(bidAmount, revealTime) {
-  const timelock = new Timelock();
-  
-  const encryptedBid = await timelock.encrypt(
-    { amount: bidAmount, bidder: address },
-    revealTime // Unix timestamp
-  );
-  
-  return await submitToChain(encryptedBid);
+  // Native ink! Smart Contracts on IDN
+  nativeInk: `// Native ink! Smart Contracts on the Ideal Network
+use idn_contract_lib::ext::IDNEnvironment;
+
+#[ink::contract(env = IDNEnvironment)]
+pub mod MyContract {
+    use crate::IDNEnvironment;
+    
+    #[ink(storage)]
+    pub struct MyContract {
+        random_value: u64,
+    }
+    
+    impl MyContract {
+        #[ink(constructor)]
+        pub fn new() -> Self {
+            Self { random_value: 0 }
+        }
+        
+        #[ink(message)]
+        pub fn get_random(&mut self) -> u64 {
+            // Fetch the latest random value from the runtime
+            let random = self.env().extension().random();
+            self.random_value = random;
+            random
+        }
+    }
 }
 
-// Automatically revealed at specified time
-const revealedBids = await timelock.getRevealed(auctionId);`,
+// Add to Cargo.toml:
+// [dependencies]
+// idn-contract-lib = { version = "0.1.0", default-features = false }`,
 
-  integration: `// XCM Cross-chain integration
-import { XcmClient } from '@ideal-labs/sdk';
+  // Timelock Encryption for Frontend
+  timelock: `// Frontend Timelock Transactions with etf.js
+import { etf } from '@ideallabs/etf.js';
 
-const client = new XcmClient({
-  parachain: 'your-parachain-id',
-  endpoint: 'wss://your-rpc-endpoint'
-});
-
-// Request randomness from another chain
-const randomnessRequest = await client.requestRandomness({
-  callback: 'your-pallet::random-callback',
-  parameters: { gameId: 12345 }
-});
-
-// Receive result via XCM message
-console.log('Cross-chain randomness:', randomnessRequest.result);`
+async function createTimelockTransaction() {
+  // Schedule for round number 123123123123
+  const executionRound = 123123123123;
+  
+  // Encrypt the transaction with a secret seed
+  let secretSeed = new TextEncoder().encode('my-secret-seed');
+  const delayedTx = await etf.delay(innerCall, executionRound, secretSeed);
+  
+  // zeroize your seed!
+  secretSeed.fill(0);
+  
+  // Sign and submit the delayed transaction (using @polkadotjs/api)
+  await delayedTx.signAndSend(alice, (result) => {
+    if (result.status.isInBlock) {
+      console.log(\`Delayed transaction submitted in block \${result.status.asInBlock}\`);
+    }
+  });
+  `
 }
 
 export default function Developer() {
   const [activeTab, setActiveTab] = useState<keyof typeof codeExamples>('randomness')
 
   const tabs = [
-    { key: 'randomness' as const, label: 'Randomness', icon: '🎲' },
+    { key: 'randomness' as const, label: 'VRaaS', icon: '🎲' },
     { key: 'timelock' as const, label: 'Timelock', icon: '⏰' },
-    { key: 'integration' as const, label: 'XCM Integration', icon: '🔗' }
+    { key: 'crossChainInk' as const, label: 'X-Chain ink!', icon: '🔗' },
+    { key: 'nativeInk' as const, label: 'Native ink!', icon: '🔗' }
   ]
 
   return (
@@ -91,10 +145,10 @@ export default function Developer() {
           >
             <h3 className="text-2xl font-bold mb-6">Quick Integration</h3>
             <p className="text-text-secondary mb-8 text-lg leading-relaxed">
-              Get started with our TypeScript SDK or direct XCM calls. Works with any Polkadot 
+              Get started with our TypeScript SDK or direct XCM calls. Works with any Polkadot
               parachain and can be extended to other ecosystems.
             </p>
-            
+
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-secondary rounded-full"></span>
@@ -137,11 +191,10 @@ export default function Developer() {
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
-                    activeTab === tab.key
-                      ? 'bg-primary/10 text-primary border-b-2 border-primary'
-                      : 'text-text-secondary hover:text-text-primary'
-                  }`}
+                  className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab.key
+                    ? 'bg-primary/10 text-primary border-b-2 border-primary'
+                    : 'text-text-secondary hover:text-text-primary'
+                    }`}
                 >
                   <span className="mr-2">{tab.icon}</span>
                   {tab.label}
@@ -161,7 +214,7 @@ export default function Developer() {
         </div>
 
         {/* Quick Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -184,7 +237,7 @@ export default function Developer() {
             <div className="text-3xl font-bold text-text-primary mb-2">24/7</div>
             <div className="text-text-secondary">Developer Support</div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

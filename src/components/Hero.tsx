@@ -16,7 +16,7 @@ export default function Hero() {
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
             <span className="gradient-text">Cross-Chain</span>
             <br />
-            <span className="text-slate-100">Randomness & Timelock</span>
+            <span className="text-slate-100">Randomness & Timelocked Transactions</span>
             <br />
             <span className="text-cyan-400">for Web3</span>
           </h1>
@@ -28,7 +28,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             The coordination layer enabling verifiable randomness and timelocked transactions 
-            across any blockchain. Built for protocol developers and Web3 gaming.
+            across parachains. Built for protocol developers, Web3 gaming, and more.
           </motion.p>
 
           <motion.div 
@@ -51,9 +51,14 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <p className="mb-4">Live on Paseo Testnet • Polkadot Ecosystem</p>
+            <p className="mb-4">
+              {/* link to docs */}
+              <Link className='btn-secondary text-lg px-8 py-4' href='#' target='#'>
+                Live on Paseo Testnet • Polkadot Ecosystem
+                </Link>
+            </p>
             <div className="flex justify-center space-x-8 text-sm">
-              <span>✓ Drand Bridge</span>
+              <span>✓ Audited</span>
               <span>✓ XCM Compatible</span>
               <span>✓ Developer Ready</span>
             </div>

@@ -6,20 +6,20 @@ const useCases = [
   {
     icon: '🎮',
     title: 'Web3 Gaming',
-    description: 'Fair loot drops, matchmaking, tournaments, and procedural generation',
-    examples: ['Turn-based strategy games', 'NFT battle mechanics', 'Tournament brackets', 'Loot box fairness']
+    description: 'Fair loot drops, matchmaking, tournaments, and automated procedural generation',
+    examples: ['Turn-based strategy games', 'NFT battle mechanics', 'Tournament brackets', 'Loot box fairness', 'Unique Identifiers']
   },
   {
     icon: '🏛️',
     title: 'DAO Governance',
     description: 'Leader elections, proposal voting, and fair governance mechanisms',
-    examples: ['Committee selection', 'Voting randomization', 'Proposal ordering', 'Fair representation']
+    examples: ['Committee selection', 'Voting randomization', 'Proposal ordering', 'Fair representation', 'Leader Elections']
   },
   {
     icon: '💰',
     title: 'DeFi Protocols',
     description: 'Sealed-bid auctions, lottery protocols, and MEV-resistant transactions',
-    examples: ['Dutch auctions', 'Liquidation fairness', 'Yield farming lottery', 'MEV protection']
+    examples: ['Candle auctions', 'Liquidation fairness', 'Yield farming lottery', 'MEV protection']
   },
   {
     icon: '🎨',
