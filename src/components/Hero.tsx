@@ -37,10 +37,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link href="/docs/quick-start" className="btn-primary text-lg px-8 py-4">
+            <Link href="https://docs.idealabs.network/getting_started/quick_start" className="btn-primary text-lg px-8 py-4">
               Start Building
             </Link>
-            <Link href="/docs" className="btn-secondary text-lg px-8 py-4">
+            <Link href="https://docs.idealabs.network" className="btn-secondary text-lg px-8 py-4">
               View Documentation
             </Link>
           </motion.div>
@@ -53,7 +53,7 @@ export default function Hero() {
           >
             <p className="mb-4">
               {/* link to docs */}
-              <Link className='btn-secondary text-lg px-8 py-4' href='#' target='#'>
+              <Link className='btn-secondary text-lg px-8 py-4' href='https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fidn0-testnet.idealabs.network#/explorer' target='#'>
                 Live on Paseo Testnet • Polkadot Ecosystem
                 </Link>
             </p>

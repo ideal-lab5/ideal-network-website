@@ -42,7 +42,7 @@ export default function Header() {
             <Link href="#developers" className="text-slate-300 hover:text-indigo-400 transition-colors">
               Developers
             </Link>
-            <Link href="/docs" className="text-slate-300 hover:text-indigo-400 transition-colors">
+            <Link href="https://docs.idealabs.network" target='#' className="text-slate-300 hover:text-indigo-400 transition-colors">
               Docs
             </Link>
           </div>
@@ -80,7 +80,7 @@ export default function Header() {
               <Link href="#developers" className="block text-slate-300 hover:text-indigo-400 transition-colors">
                 Developers
               </Link>
-              <Link href="/docs" className="block text-slate-300 hover:text-indigo-400 transition-colors">
+              <Link href="https://docs.idealabs.network" target='#' className="block text-slate-300 hover:text-indigo-400 transition-colors">
                 Docs
               </Link>
               <Link href="/docs/quick-start" className="btn-primary inline-block">

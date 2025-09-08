@@ -1,28 +1,29 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Gamepad2, Building2, DollarSign, Palette } from 'lucide-react'
 
 const useCases = [
   {
-    icon: '🎮',
+    icon: Gamepad2,
     title: 'Web3 Gaming',
     description: 'Fair loot drops, matchmaking, tournaments, and automated procedural generation',
     examples: ['Turn-based strategy games', 'NFT battle mechanics', 'Tournament brackets', 'Loot box fairness', 'Unique Identifiers']
   },
   {
-    icon: '🏛️',
+    icon: Building2,
     title: 'DAO Governance',
     description: 'Leader elections, proposal voting, and fair governance mechanisms',
     examples: ['Committee selection', 'Voting randomization', 'Proposal ordering', 'Fair representation', 'Leader Elections']
   },
   {
-    icon: '💰',
+    icon: DollarSign,
     title: 'DeFi Protocols',
     description: 'Sealed-bid auctions, lottery protocols, and MEV-resistant transactions',
     examples: ['Candle auctions', 'Liquidation fairness', 'Yield farming lottery', 'MEV protection']
   },
   {
-    icon: '🎨',
+    icon: Palette,
     title: 'NFT Projects',
     description: 'Fair drops, reveal mechanics, and randomized trait generation',
     examples: ['Fair mint queues', 'Trait randomization', 'Reveal mechanics', 'Airdrop selection']
@@ -30,7 +31,7 @@ const useCases = [
 ]
 
 export default function UseCases() {
-  return (
+return (
     <section id="use-cases" className="section-padding">
       <div className="container-max">
         <motion.div
@@ -45,32 +46,38 @@ export default function UseCases() {
             Real-world applications powered by verifiable randomness and precise timing
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {useCases.map((useCase, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="card text-center group"
-            >
-              <div className="text-5xl mb-6 group-hover:animate-bounce">{useCase.icon}</div>
-              <h3 className="text-xl font-semibold mb-4">{useCase.title}</h3>
-              <p className="text-text-secondary mb-6">{useCase.description}</p>
-              <div className="space-y-2">
-                {useCase.examples.map((example, exampleIndex) => (
-                  <div 
-                    key={exampleIndex}
-                    className="text-sm text-text-muted bg-bg-dark/50 px-3 py-2 rounded-md"
-                  >
-                    {example}
+          {useCases.map((useCase, index) => {
+            const IconComponent = useCase.icon
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="card text-center group"
+              >
+                <div className="mb-6 flex justify-center">
+                  <div className="p-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <IconComponent className="w-8 h-8 text-primary" />
                   </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+                </div>
+                <h3 className="text-xl font-semibold mb-4">{useCase.title}</h3>
+                <p className="text-text-secondary mb-6">{useCase.description}</p>
+                <div className="space-y-2">
+                  {useCase.examples.map((example, exampleIndex) => (
+                    <div
+                      key={exampleIndex}
+                      className="text-sm text-text-muted bg-bg-dark/50 px-3 py-2 rounded-md"
+                    >
+                      {example}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )
+          })}
         </div>
       </div>
     </section>

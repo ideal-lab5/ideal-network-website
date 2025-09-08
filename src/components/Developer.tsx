@@ -9,8 +9,9 @@ const codeExamples = {
 pub struct PulseConsumerImpl;
 impl PulseConsumer<Pulse, SubscriptionId, (), ()> for PulseConsumerImpl {
     fn consume_pulse(pulse: Pulse, sub_id: SubscriptionId) -> Result<(), ()> {
+        let pk = hex::decode(BEACON_PUBKEY);
         if pulse
-            .authenticate(BEACON_PUBKEY.try_into().expect("The public key is well-defined; qed."))
+            .authenticate(pk.try_into().expect("The public key is well-defined; qed."))
         {
             // Randomness consumption logic goes here.
             log::info!("IDN Consumer: Verified pulse: {:?} with sub id: {:?}", pulse, sub_id);
@@ -145,8 +146,9 @@ export default function Developer() {
           >
             <h3 className="text-2xl font-bold mb-6">Quick Integration</h3>
             <p className="text-text-secondary mb-8 text-lg leading-relaxed">
-              Get started with our TypeScript SDK or direct XCM calls. Works with any Polkadot
-              parachain and can be extended to other ecosystems.
+              Get started with our SDK to integrate verifiable randomness with any Polkadot
+              parachain or ink! smart contract, send MEV-resistant transactions, 
+              or deploy native contracts on the IDN!
             </p>
 
             <div className="space-y-4 mb-8">
