@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import '../app/globals.css';
+import Image from 'next/image';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -28,7 +29,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 px-4">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold gradient-text">
-            Ideal Labs
+            <Image src="https://github.com/ideal-lab5/logos/blob/main/logo-variants/original-logo.png?raw=true" width={150} height={100} alt="logo"/>
           </Link>
 
           {/* Desktop Navigation */}

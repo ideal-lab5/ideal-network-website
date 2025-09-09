@@ -48,11 +48,7 @@ impl RandomnessReceiver for YourContract {
         // Your randomness consumption logic here
         Ok(())
     }
-}
-
-// Add to Cargo.toml:
-// [dependencies]
-// idn-client-contract-lib = { version = "0.1.0", default-features = false }`,
+}`,
 
   // Native ink! Smart Contracts on IDN
   nativeInk: `// Native ink! Smart Contracts on the Ideal Network
@@ -76,16 +72,12 @@ pub mod MyContract {
         #[ink(message)]
         pub fn get_random(&mut self) -> u64 {
             // Fetch the latest random value from the runtime
-            let random = self.env().extension().random();
+            let random = self.env().extension().fetch_random();
             self.random_value = random;
             random
         }
     }
-}
-
-// Add to Cargo.toml:
-// [dependencies]
-// idn-contract-lib = { version = "0.1.0", default-features = false }`,
+}`,
 
   // Timelock Encryption for Frontend
   timelock: `// Frontend Timelock Transactions with etf.js
@@ -154,19 +146,19 @@ export default function Developer() {
             <div className="space-y-4 mb-8">
               <div className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                <span>TypeScript SDK with full type safety</span>
+                <span>• TypeScript and Rust SDKs</span>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                <span>XCM-native for seamless integration</span>
+                <span>• XCM-native for seamless integration</span>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                <span>Comprehensive documentation & examples</span>
+                <span>• Comprehensive documentation & examples</span>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-secondary rounded-full"></span>
-                <span>Active community support</span>
+                <span>• Open-Source and Extensible</span>
               </div>
             </div>
 

@@ -12,10 +12,10 @@ const features = [
     title: 'Verifiable Randomness-as-a-Service',
     description: 'Tamper-proof, publicly verifiable randomness powered by Drand. Perfect for lotteries, leader elections, NFT drops, and fair gaming mechanics.',
     details: [
-      'Backed by the Drand Quicknet randomness beacon',
-      'Subscription model with DOT as payment asset',
-      'Fresh verifiable randomness available every 6s',
-      'Ideal for gaming, governance, and DeFi applications'
+      '• Backed by the Drand Quicknet randomness beacon',
+      '• Subscription model with DOT as payment asset',
+      '• Fresh verifiable randomness available every 6s',
+      '• Ideal for gaming, governance, and DeFi applications'
     ]
   },
   {
@@ -23,10 +23,10 @@ const features = [
     title: 'Timelocked Transactions',
     description: 'Execute transactions at precise future times with cryptographic guarantees. Enable sealed-bid auctions, eliminate MEV, and enable time-gated game mechanics.',
     details: [
-      'Trustless timelock encryption',
-      'Future-proof coordination without intermediaries',
-      'Predictable, verifiable timing with public randomness powered by Drand.',
-      'Unlocks fair auctions, games, and delayed execution'
+      '• Trustless timelock encryption',
+      '• Future-proof coordination without intermediaries',
+      '• Predictable, verifiable timing with public randomness powered by Drand.',
+      '• Unlocks fair auctions, games, and delayed execution'
     ]
   },
   {
@@ -34,10 +34,10 @@ const features = [
     title: 'Cross-Chain Integration',
     description: 'Deploy across any parachain or network with minimal changes. Coordinate across ecosystems using XCM without sacrificing security or speed.',
     details: [
-      'XCM-native implementation architecture for parachains',
-      'Lightweight SDK for easy integration',
-      'Minimal integration effort',
-      'Secure, scalable, and ready'
+      '• XCM-native implementation architecture for parachains',
+      '• Lightweight SDK for easy integration',
+      '• Minimal integration effort',
+      '• Secure, scalable, and ready'
     ]
   }
 ]

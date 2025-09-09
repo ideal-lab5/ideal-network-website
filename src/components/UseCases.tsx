@@ -7,26 +7,26 @@ const useCases = [
   {
     icon: Gamepad2,
     title: 'Web3 Gaming',
-    description: 'Fair loot drops, matchmaking, tournaments, and automated procedural generation',
-    examples: ['Turn-based strategy games', 'NFT battle mechanics', 'Tournament brackets', 'Loot box fairness', 'Unique Identifiers']
+    description: 'Enables fair loot drops, transparent matchmaking, and the creation of unique digital assets for games.',
+    examples: ['Fair loot drops', 'Verifiable matchmaking', 'Tournament brackets', 'Procedural generation of unique worlds or items']
   },
   {
     icon: Building2,
     title: 'DAO Governance',
-    description: 'Leader elections, proposal voting, and fair governance mechanisms',
-    examples: ['Committee selection', 'Voting randomization', 'Proposal ordering', 'Fair representation', 'Leader Elections']
+    description: 'Brings verifiable fairness and transparency to decentralized autonomous organizations (DAOs).',
+    examples: ['Committee selection', 'Randomized voting', 'Proposal ordering', 'Fair representation in governance']
   },
   {
     icon: DollarSign,
     title: 'DeFi Protocols',
-    description: 'Sealed-bid auctions, lottery protocols, and MEV-resistant transactions',
-    examples: ['Candle auctions', 'Liquidation fairness', 'Yield farming lottery', 'MEV protection']
+    description: 'Creates a foundation for more transparent and secure decentralized financial applications.',
+    examples: ['On-chain candle auctions', 'Fair liquidations', 'MEV-resistant transactions', 'Lottery protocols']
   },
   {
     icon: Palette,
     title: 'NFT Projects',
-    description: 'Fair drops, reveal mechanics, and randomized trait generation',
-    examples: ['Fair mint queues', 'Trait randomization', 'Reveal mechanics', 'Airdrop selection']
+    description: 'Ensures fairness in asset distribution and provides tools for verifiable, on-chain trait generation.',
+    examples: ['Fair mint queues', 'Verifiable trait randomization', 'Transparent reveal mechanics', 'Airdrop selection']
   }
 ]
 
