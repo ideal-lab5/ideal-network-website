@@ -57,11 +57,6 @@ export default function Hero() {
                 Live on Paseo Testnet • Polkadot Ecosystem
                 </Link>
             </p>
-            <div className="flex justify-center space-x-8 text-sm">
-              <span>✓ Audited</span>
-              <span>✓ XCM Compatible</span>
-              <span>✓ Developer Ready</span>
-            </div>
           </motion.div>
         </motion.div>
       </div>

@@ -18,9 +18,9 @@ const features = [
       '• Ideal for gaming, governance, and DeFi applications'
     ]
   },
-  {
-    icon: ClipboardClock ,
-    title: 'Timelocked Transactions',
+  { 
+    icon: ClipboardClock , 
+    title: 'Timelocked Transactions', 
     description: 'Execute transactions at precise future times with cryptographic guarantees. Enable sealed-bid auctions, eliminate MEV, and enable time-gated game mechanics.',
     details: [
       '• Trustless timelock encryption',

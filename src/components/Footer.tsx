@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const footerSections = [
@@ -42,7 +43,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <Link href="/" className="text-2xl font-bold gradient-text mb-4 inline-block">
-              Ideal Labs
+              <Image src="https://github.com/ideal-lab5/logos/blob/main/logo-variants/original-logo.png?raw=true" width={150} height={100} alt="logo" />
             </Link>
             <p className="text-text-secondary mb-6 leading-relaxed">
               Building the coordination layer for Web3 with verifiable randomness and timelock encryption.

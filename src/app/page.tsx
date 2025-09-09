@@ -9,6 +9,7 @@ import Footer from '@/src/components/Footer'
 import BackgroundAnimation from '@/src/components/BackgroundAnimation'
 
 import './globals.css';
+import Team from '../components/Team'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Features />
       <UseCases />
       <Developer />
+      <Team />
       <Footer />
     </main>
   )
