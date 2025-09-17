@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { DOCS_URI } from '../app/page'
+import { DOCS_URI } from '../app/constants'
 
 const codeExamples = {
   // Parachain Runtime Integration - Verifiable Randomness
@@ -142,7 +142,7 @@ export default function Developer() {
               <h3 className="text-2xl font-bold mb-6 text-white">Quick Integration</h3>
               <p className="text-slate-300 mb-8 text-lg leading-relaxed">
                 Get started with our SDK to integrate verifiable randomness with any Polkadot
-                parachain or ink! smart contract, send MEV-resistant transactions, 
+                parachain or ink! smart contract, send MEV-resistant transactions,
                 or deploy native contracts on the IDN.
               </p>
 
@@ -188,23 +188,21 @@ export default function Developer() {
                   <button
                     key={tab.key}
                     onClick={() => setActiveTab(tab.key)}
-                    className={`flex-1 px-4 py-3 text-sm font-medium transition-all duration-200 ${
-                      activeTab === tab.key
-                        ? 'bg-blue-600/20 text-blue-400 border-b-2 border-blue-400'
-                        : 'text-slate-400 hover:text-slate-200 hover:bg-slate-700/40'
-                    }`}
+                    className={`flex-1 px-4 py-3 text-sm font-medium transition-all duration-200 ${activeTab === tab.key
+                      ? 'bg-blue-600/20 text-blue-400 border-b-2 border-blue-400'
+                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-700/40'
+                      }`}
                   >
                     <span className="mr-2">{tab.icon}</span>
                     {tab.label}
                   </button>
                 ))}
               </div>
-
               {/* Code Content */}
               <div className="p-6 bg-slate-900/60">
                 <pre className="text-sm overflow-x-auto max-h-160">
                   <code className="text-slate-300 leading-relaxed font-mono whitespace-pre">
-                    {codeExamples[activeTab]}
+                    {codeExamples[activeTab as keyof typeof codeExamples]}
                   </code>
                 </pre>
               </div>

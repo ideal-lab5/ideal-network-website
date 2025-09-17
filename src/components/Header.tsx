@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import '../app/globals.css';
 import Image from 'next/image';
-import { DOCS_URI } from '../app/page';
+import { DOCS_URI } from '../app/constants';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)

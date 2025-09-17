@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { DOCS_URI } from '../app/page'
+import { DOCS_URI } from '../app/constants'
 
 export default function Hero() {
   return (
