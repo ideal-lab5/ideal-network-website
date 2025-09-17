@@ -3,18 +3,10 @@ import Link from 'next/link'
 
 const footerSections = [
   {
-    title: 'Products',
-    links: [
-      { label: 'Verifiable Randomness', href: '/docs/randomness' },
-      { label: 'Timelocked Transactions', href: '/docs/timelock' },
-      { label: 'Cross-Chain SDK', href: '/docs/sdk' },
-    ]
-  },
-  {
     title: 'Developers',
     links: [
       { label: 'Documentation', href: 'https://docs.idealabs.network' },
-      { label: 'Examples', href: '/docs/examples' },
+      { label: 'Examples', href: 'https://docs.idealabs.network' },
       { label: 'GitHub', href: 'https://github.com/ideal-lab5' },
     ]
   },

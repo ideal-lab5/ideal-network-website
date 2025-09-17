@@ -11,6 +11,8 @@ import BackgroundAnimation from '@/src/components/BackgroundAnimation'
 import './globals.css';
 import Team from '../components/Team'
 
+export const DOCS_URI = "https://docs.idealabs.network"
+
 export default function Home() {
   return (
     <main className="relative min-h-screen">

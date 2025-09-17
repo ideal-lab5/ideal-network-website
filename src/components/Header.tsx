@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import '../app/globals.css';
 import Image from 'next/image';
+import { DOCS_URI } from '../app/page';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -18,18 +19,17 @@ export default function Header() {
   }, [])
 
   return (
-    <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700' 
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700'
           : 'bg-slate-900/80 backdrop-blur-md'
-      }`}
+        }`}
     >
       <nav className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between h-16 px-4">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold gradient-text">
-            <Image src="https://github.com/ideal-lab5/logos/blob/main/logo-variants/original-logo.png?raw=true" width={150} height={100} alt="logo"/>
+            <Image src="https://github.com/ideal-lab5/logos/blob/main/logo-variants/original-logo.png?raw=true" width={150} height={100} alt="logo" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -43,15 +43,18 @@ export default function Header() {
             <Link href="#developers" className="text-slate-300 hover:text-indigo-400 transition-colors">
               Developers
             </Link>
-            <Link href="https://docs.idealabs.network" target='#' className="text-slate-300 hover:text-indigo-400 transition-colors">
+            <Link href="#team" className="text-slate-300 hover:text-indigo-400 transition-colors">
+              Team
+            </Link>
+            <Link href={DOCS_URI} target='#' className="text-slate-300 hover:text-indigo-400 transition-colors">
               Docs
             </Link>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link href="/docs/quick-start" className="btn-primary">
-              Get Started
+            <Link href="#" target='#' className="btn-primary">
+              App [Coming Soon]
             </Link>
           </div>
 
@@ -84,7 +87,7 @@ export default function Header() {
               <Link href="https://docs.idealabs.network" target='#' className="block text-slate-300 hover:text-indigo-400 transition-colors">
                 Docs
               </Link>
-              <Link href="/docs/quick-start" className="btn-primary inline-block">
+              <Link href={DOCS_URI} className="btn-primary inline-block">
                 Get Started
               </Link>
             </div>

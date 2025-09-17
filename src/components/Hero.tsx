@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { DOCS_URI } from '../app/page'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center section-padding relative">
+    <section className="min-h-screen flex items-center justify-center relative">
       <div className="container-max text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -20,27 +21,26 @@ export default function Hero() {
             <br />
             <span className="text-cyan-400">for Web3</span>
           </h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            The coordination layer enabling verifiable randomness and timelocked transactions 
-            across parachains. Built for protocol developers, Web3 gaming, and more.
+            Powering MEV-resistance, provably fair games, and secure dApps across any parachain.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link href="https://docs.idealabs.network/getting_started/quick_start" className="btn-primary text-lg px-8 py-4">
+            <Link href={DOCS_URI + '/getting_started/quick_start'} className="btn-primary text-lg px-8 py-4">
               Start Building
             </Link>
-            <Link href="https://docs.idealabs.network" className="btn-secondary text-lg px-8 py-4">
+            <Link href={DOCS_URI} className="btn-secondary text-lg px-8 py-4">
               View Documentation
             </Link>
           </motion.div>
@@ -55,7 +55,7 @@ export default function Hero() {
               {/* link to docs */}
               <Link className='btn-secondary text-lg px-8 py-4' href='https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fidn0-testnet.idealabs.network#/explorer' target='#'>
                 Live on Paseo Testnet • Polkadot Ecosystem
-                </Link>
+              </Link>
             </p>
           </motion.div>
         </motion.div>

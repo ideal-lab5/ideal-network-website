@@ -8,7 +8,7 @@ const useCases = [
     icon: Gamepad2,
     title: 'Web3 Gaming',
     description: 'Enables fair loot drops, transparent matchmaking, and the creation of unique digital assets for games.',
-    examples: ['Fair loot drops', 'Verifiable matchmaking', 'Tournament brackets', 'Procedural generation of unique worlds or items']
+    examples: ['Fair loot drops', 'Proactive Anti-Cheat Mechanisms', 'Unruggable Asset Swaps', 'Procedural generation of unique worlds or items']
   },
   {
     icon: Building2,
@@ -20,7 +20,7 @@ const useCases = [
     icon: DollarSign,
     title: 'DeFi Protocols',
     description: 'Creates a foundation for more transparent and secure decentralized financial applications.',
-    examples: ['On-chain candle auctions', 'Fair liquidations', 'MEV-resistant transactions', 'Lottery protocols']
+    examples: ['On-chain candle auctions', 'Fair liquidations', 'MEV-resistant trades', 'Lottery protocols']
   },
   {
     icon: Palette,
@@ -31,7 +31,7 @@ const useCases = [
 ]
 
 export default function UseCases() {
-return (
+  return (
     <section id="use-cases" className="section-padding">
       <div className="container-max">
         <motion.div
@@ -41,9 +41,9 @@ return (
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Built for Web3 Gaming & DeFi</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Built for Fairness</h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Real-world applications powered by verifiable randomness and precise timing
+            Stop front-running, ensure provably fair outcomes, and enable secure conditional execution for all dApps.
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
