@@ -28,7 +28,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Powering MEV-resistance, provably fair games, and secure dApps across any parachain.
+            Powering provably fair games and dApps across any parachain.
           </motion.p>
 
           <motion.div
@@ -37,12 +37,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link href={DOCS_URI + '/getting_started/quick_start'} className="btn-primary text-lg px-8 py-4">
+            <Link href={DOCS_URI + '/getting_started/quick_start'} target='#' className="btn-primary text-lg px-8 py-4">
               Start Building
             </Link>
-            <Link href={DOCS_URI} className="btn-secondary text-lg px-8 py-4">
+            {/* <Link href={DOCS_URI} className="btn-secondary text-lg px-8 py-4">
               View Documentation
-            </Link>
+            </Link> */}
           </motion.div>
 
           <motion.div

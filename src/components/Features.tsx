@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Dices, ClipboardClock, Blocks } from 'lucide-react'
+import { DOCS_URI } from '../app/constants'
 
 
 const features = [
@@ -21,10 +22,10 @@ const features = [
   { 
     icon: ClipboardClock , 
     title: 'Timelocked Transactions', 
-    description: 'Execute transactions at precise future times with cryptographic guarantees. Enable sealed-bid auctions, eliminate MEV, and enable time-gated game mechanics.',
+    description: '"Encryption to the Future": execute encrypted transactions at precise future times with cryptographic guarantees. Enable sealed-bid auctions, eliminate MEV, and enable time-gated game mechanics.',
     details: [
-      '• Trustless timelock encryption',
-      '• Future-proof coordination without intermediaries',
+      '• Trustlessly and automatically reveal hidden intent at a future deadline',
+      '• MEV & Front-running resistant transaction execution',
       '• Predictable, verifiable timing with public randomness powered by Drand.',
       '• Unlocks fair auctions, games, and delayed execution'
     ]
@@ -78,12 +79,9 @@ export default function Features() {
                   onClick={() => setSelectedFeature(index)}
                 >
                   <div className="flex items-start space-x-4">
-
-                    {/* <div className="text-4xl">{feature.icon}</div> */}
                     <div className="mb-6 flex justify-center">
                       <div className="p-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl group-hover:scale-110 transition-transform duration-300">
                         <IconComponent />
-                        {/* <IconComponent className="w-8 h-8 text-primary" /> */}
                       </div>
                     </div>
                     <div className="flex-1">
@@ -123,7 +121,7 @@ export default function Features() {
               ))}
             </ul>
             <div className="mt-8">
-              <Link href="/docs" className="text-primary font-semibold hover:text-accent transition-colors">
+              <Link href={DOCS_URI} target='#' className="text-primary font-semibold hover:text-accent transition-colors">
                 Learn more →
               </Link>
             </div>
