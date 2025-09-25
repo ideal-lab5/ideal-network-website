@@ -25,7 +25,7 @@ const teamMembers = [
     name: "Tony Riemer",
     role: "",
     bio: "",
-    image: "https://imgs.search.brave.com/3azI0YS6WX4ToeuayAEIiqgs_TyyQ3EFGi_fWQK6L6U/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJmLzE1/L2YyLzJmMTVmMmU4/YzY4OGIzMTIwZDNk/MjY0NjdiMDYzMzBj/LmpwZw", // Replace with actual image path
+    image: "./tony.jpg",
     linkedin: "https://www.linkedin.com/in/tony-riemer/",
     github: "https://github.com/driemworks"
   },
@@ -33,7 +33,7 @@ const teamMembers = [
     name: "Coleman Irby",
     role: "",
     bio: "",
-    image: "https://imgs.search.brave.com/3azI0YS6WX4ToeuayAEIiqgs_TyyQ3EFGi_fWQK6L6U/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzJmLzE1/L2YyLzJmMTVmMmU4/YzY4OGIzMTIwZDNk/MjY0NjdiMDYzMzBj/LmpwZw", // Replace with actual image path
+    image: "./coleman.jpg",
     linkedin: "https://www.linkedin.com/in/coleman-irby-229b13103/",
     github: "https://github.com/colemanirby"
   }
